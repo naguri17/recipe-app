@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import { MainLayout } from "./layouts/MainLayout";
+import { store } from "./redux/store";
+import { RouterProvider } from "./router";
+import { BrowserRouter } from "react-router-dom";
+import "./styles/main.css";
+import "antd/dist/antd.css";
 
-function App() {
+export default function RecipeApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Provider store={store}>
+        <MainLayout>
+          <RouterProvider />
+        </MainLayout>
+      </Provider>
+    </BrowserRouter>
   );
 }
-
-export default App;
