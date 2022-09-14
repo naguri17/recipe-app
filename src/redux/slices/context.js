@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { headerValues } from "./../../constants/enum";
 
 const initialState = {
   headerOption: "recipes",

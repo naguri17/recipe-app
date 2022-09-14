@@ -4,7 +4,7 @@ import { store } from "./redux/store";
 import { RouterProvider } from "./router";
 import { BrowserRouter } from "react-router-dom";
 import "./styles/main.css";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 
 export default function RecipeApp() {
   return (
